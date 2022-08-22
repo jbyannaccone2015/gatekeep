@@ -14,7 +14,7 @@ export default function CharEnter({ setShowModal, isUpdate, currentCharacter, ch
     const email = user.email
 
     const newCharacter = async () => {
-        axios.post(`https://gkeep-character-service.herokuapp.com//character/`, {
+        axios.post(`https://gkeep-character-service.herokuapp.com/character/`, {
             user: email,
             firstName: newCharFirstName,
             lastName: newCharLastName,
@@ -32,7 +32,7 @@ export default function CharEnter({ setShowModal, isUpdate, currentCharacter, ch
 
 
     const deleteCharacter = async () => {
-        axios.delete(`https://gkeep-character-service.herokuapp.com//character/${currentCharacter.charId}`)
+        axios.delete(`https://gkeep-character-service.herokuapp.com/character/${currentCharacter.charId}`)
         .then(res => {
             console.log("Character successfully deleted!")
             const index = characterList.indexOf(res.data)
@@ -45,7 +45,7 @@ export default function CharEnter({ setShowModal, isUpdate, currentCharacter, ch
     }
 
     const updateCharacter = async () => {
-        axios.patch(`https://gkeep-character-service.herokuapp.com//character/${currentCharacter.charId}`, 
+        axios.patch(`https://gkeep-character-service.herokuapp.com/character/${currentCharacter.charId}`, 
         {
             firstName: updatedFirstName,
             lastName: updatedLastName,
