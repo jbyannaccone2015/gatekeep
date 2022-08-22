@@ -18,7 +18,7 @@ export default function Signup() {
         const registeredUser = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
 
         await auth.currentUser.getIdToken().then(accessToken => {
-            axios.post('http://localhost:5000/user',
+            axios.post('https://gkeep-user-service.herokuapp.com//user',
             {
                 userEmail: registerEmail
             }, {
@@ -50,7 +50,7 @@ export default function Signup() {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             console.log(token)
-            axios.post('http://localhost:5000/user', 
+            axios.post('https://gkeep-user-service.herokuapp.com//user', 
             {
                 userEmail: result.email
             })
