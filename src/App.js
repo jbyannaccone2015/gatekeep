@@ -12,7 +12,7 @@ import { auth } from './components/firebase-config';
 
 
 function App() {
-  const { updateUser, user } = useContext(UserContext)
+  const { updateUser } = useContext(UserContext)
   const [localUser, setLocalUser] = useState({})
   const [loading, setLoading] = useState(true)
 

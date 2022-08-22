@@ -8,7 +8,7 @@ import UserContext from '../../currentUserContext'
 import axios from 'axios'
 
 export default function Signup() {
-    const { user, updateUser } = useContext(UserContext)
+    const { updateUser } = useContext(UserContext)
     const navigate = useNavigate()
     const [registerEmail, setRegisterEmail] = useState("")
     const [registerPassword, setRegisterPassword] = useState("")

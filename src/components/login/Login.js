@@ -7,7 +7,7 @@ import { signInWithGoogle } from '../firebase-config'
 
 
 export default function Login() {
-    const { user, updateUser } = useContext(UserContext)
+    const { updateUser } = useContext(UserContext)
     const navigate = useNavigate()
     const [loginEmail, setLoginEmail] = useState()
     const [loginPassword, setLoginPassword] = useState()

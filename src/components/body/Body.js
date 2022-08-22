@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Sidebar from './Sidebar'
 import Searchbar from './Searchbar'
 import CharList from './charList'

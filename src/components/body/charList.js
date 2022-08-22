@@ -3,7 +3,7 @@ import Smallcard from '../card/Smallcard'
 import axios from 'axios'
 import { auth } from '../firebase-config'
 
-export default function CharList({ setShowModal, setIsUpdate, email, setCurrentCharacter, setCharacterList, showModal }) {
+export default function CharList({ setShowModal, setIsUpdate, setCurrentCharacter, setCharacterList, showModal }) {
     const [characters, setCharacters] = useState([])
 
     useEffect(() => {
