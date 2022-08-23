@@ -10,7 +10,7 @@ export default function CharList({ setShowModal, setIsUpdate, setCurrentCharacte
         auth.currentUser.getIdToken().then(function(idToken) {
             const token = idToken
             console.log(token)
-            axios.get(`https://cors-anywhere.herokuapp.com/https://gkeep-character-service.herokuapp.com//characters/`, {
+            axios.get(`https://gkeep-character-service.herokuapp.com/characters/`, {
                 headers: {
                     'Authorization': `${token}`
                 }
